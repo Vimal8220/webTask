@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Orders</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand text-dark bg-light" href="#">E-Commerce Orders</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link text-white" href="index.html"> Home </a>
+            <a class="nav-item nav-link text-white" href="#"> Orders</a>
+            <a class="nav-item nav-link active text-white" href="total-orders.html"> Total Orders <span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Total Quantity Ordered: </h1>
+        <div id="totalQuantity" class="mt-4 text-center">
+            <!-- Total quantity will be displayed here -->
+        </div>
+        <div class="text-center">
+        <button id="clearOrders" class="btn btn-danger mt-3">Clear Orders</button>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-3 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2024 E-commerce Website. All rights reserved by Vimal.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.herokuapp.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const totalQuantity = localStorage.getItem('totalQuantity') || 0;
+            document.getElementById('totalQuantity').innerHTML = `<p>Total Quantity: ${totalQuantity}</p>`;
+
+            document.getElementById('clearOrders').addEventListener('click', function() {
+                localStorage.setItem('totalQuantity', 0);
+                document.getElementById('totalQuantity').innerHTML = `<p>Total Quantity: 0</p>`;
+                alert('All orders have been cleared.');
+            });
+        });
+    </script>
+</body>
+</html>

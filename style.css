@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+
+}
+.text-container {
+    /* margin-top: 120px; */
+    height: 20vh;
+    width: 40vw;
+    background-image: radial-gradient(white, grey);
+    margin-left: 40px;
+}
+.overview-container {
+    text-align: center;
+    background-image: url("https://img.freepik.com/free-photo/shopping-trolleys-with-red-blue-handles-photo-frame_23-2147961885.jpg?t=st=1719638889~exp=1719642489~hmac=ac564bf5b33090da428841e0e1f4ff8d8e946b27f54fd828e86de463e498f089&w=996");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.order-container {
+    height: 50vh;
+    width: 70vw;
+    
+}
+.text-area {
+    text-align: center;
+    color: rgb(116, 88, 52);
+    padding: 40px;
+}
+.order-section {
+    margin: 8px;
+    margin-top: 14px;
+}
+.order-button {
+    text-align: center;
+    font-size: medium;
+    font-style: oblique;
+    color: rgb(240, 225, 225);
+    padding: 10px;
+    height: 70px;
+    width: 150px;
+    background-color: grey;
+    border-radius: 8px;
+    border-width: 0px;
+    border-style: none;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
